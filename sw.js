@@ -1,7 +1,8 @@
-const CACHE = 'mila-learning-missions-v7';
+const CACHE = 'mila-learning-missions-v8';
 const ASSETS = [
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/icon-192.png',
   './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/data.js','./literacy/manifest.webmanifest','./literacy/sw.js',
+  './literacy/worksheets.html','./literacy/worksheets.css','./literacy/wsdata.js','./literacy/wsrender.js',
   './worksheets.html','./worksheets.css','./worksheets.js','./update.html'
 ];
 
