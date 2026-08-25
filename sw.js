@@ -1,7 +1,7 @@
-const CACHE = 'mila-learning-missions-v8';
+const CACHE = 'mila-learning-missions-v9';
 const ASSETS = [
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/icon-192.png',
-  './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/data.js','./literacy/manifest.webmanifest','./literacy/sw.js',
+  './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/data.js','./literacy/manifest.webmanifest','./literacy/sw.js','./literacy/update.html',
   './literacy/worksheets.html','./literacy/worksheets.css','./literacy/wsdata.js','./literacy/wsrender.js',
   './worksheets.html','./worksheets.css','./worksheets.js','./update.html'
 ];
@@ -18,8 +18,13 @@ self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(
-        keys.filter(k => k !== CACHE && k.startsWith('mila-learning-missions'))
-          .map(k => caches.delete(k))
+        keys.filter(k =>
+          k !== CACHE && (
+            k.startsWith('mila-learning-missions') ||
+            k.startsWith('kindergarten-literacy-mission') ||
+            k.startsWith('kindergarten-math-mission')
+          )
+        ).map(k => caches.delete(k))
       ))
       .then(() => self.clients.claim())
   );
