@@ -1,8 +1,10 @@
 # Kindergarten Literacy Mission
 
-A 10-week, 50-session interactive literacy intervention tailored to the learner's STAR Early Literacy domain profile: phonological awareness 31, phonics/word recognition 31, vocabulary 38, print concepts 44, informational-text key ideas/details 56, and literature key ideas/details 80. The overall starting result was 648 scaled score / 31st percentile, Early Emergent / On Watch.
+A 10-week, 50-session interactive literacy intervention tailored to the learner's current assessment profile.
 
 ## Instructional allocation
+
+The assessment showed the clearest need in **phonological/phonemic awareness** and **phonics/word recognition**, followed by **vocabulary** and **print concepts**. Informational-text comprehension is developed deliberately, while stronger literary comprehension is maintained and used as a transfer channel rather than over-drilled.
 
 The sequence deliberately devotes the largest share of practice to:
 
@@ -41,4 +43,4 @@ The Parent Dashboard also accepts the letters already taught by the school's fou
 
 ## Privacy
 
-The public source does not include the student's full assessment report, surname, school, teacher, class/group, or test identifiers. It does include the non-identifying score profile because that profile drives the instructional design.
+This repository is public. It intentionally omits the student's raw assessment scores, full assessment report, surname, school, teacher, class/group, and test identifiers. The instructional priorities and sequence remain assessment-informed without publishing the underlying student record.
