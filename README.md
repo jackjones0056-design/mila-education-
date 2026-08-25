@@ -1,32 +1,28 @@
-# Mila Learning Hub
+# Mila Learning Missions
 
-A static, installable PWA containing two 8-week kindergarten intervention programs:
+A touch-friendly kindergarten practice site with:
 
-- **Math Mission** — the completed 32-lesson number-sense program.
-- **Literacy Mission** — a 32-lesson reading/literacy intervention tailored to Mila's Aug. 12, 2026 STAR Early Literacy profile.
+- **Math Mission** — the completed 8-week mathematics intervention and printable worksheets.
+- **Literacy Mission** — an 8-week, 32-lesson reading/literacy intervention customized to the learner's current skill profile.
 
-## Literacy baseline used
+## Literacy design
 
-- STAR Early Literacy scaled score: **648**
-- Percentile rank: **31**
-- Classification: **Early Emergent / On Watch**
-- Literature — Key Ideas & Details: **80** (strength / maintain)
-- Informational Text — Key Ideas & Details: **56**
-- Print Concepts: **44**
-- Vocabulary Acquisition & Use: **38**
-- Phonological Awareness: **31** (highest priority)
-- Phonics & Word Recognition: **31** (highest priority)
+The literacy sequence intentionally concentrates the most practice on **phonological/phonemic awareness** and **phonics/word recognition**, then adds deliberate **vocabulary** work and **print-concept** reinforcement. Stronger story comprehension is used as a knowledge and motivation channel rather than over-drilled.
 
-The literacy program deliberately allocates most interactive practice to phonological awareness and phonics, adds systematic vocabulary and print-concept work, and uses comprehension/knowledge activities as maintenance and a Wit & Wisdom bridge. It does **not** reproduce Wit & Wisdom proprietary lesson text.
+The app follows a sound-to-print progression:
 
-## Run locally
+**hear sounds → connect sounds to letters → blend/segment → decode/encode → read for meaning**
 
-```bash
-python3 -m http.server 8080
-```
+It does not teach picture guessing as a word-reading strategy.
 
-Then open `http://localhost:8080`.
+### Wit & Wisdom alignment
+
+The literacy sequence uses knowledge, vocabulary, discussion, and comprehension as the bridge to Wit & Wisdom without reproducing proprietary curriculum passages.
+
+## Privacy
+
+Because this repository is public, it intentionally does **not** reproduce the student's full assessment report, surname, school, teacher, class/group, or test identifiers in this README.
 
 ## GitHub Pages
 
-This repository is static-site ready. Enable **Settings → Pages → Deploy from branch → main / root**.
+The repository is a static site. Use **Settings → Pages → Deploy from branch → main / root**.
