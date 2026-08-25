@@ -1,7 +1,8 @@
-const CACHE = 'mila-learning-missions-v2';
+const CACHE = 'mila-learning-missions-v3';
 const ASSETS = [
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/icon-192.png',
-  './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/manifest.webmanifest'
+  './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/manifest.webmanifest',
+  './worksheets.html','./worksheets.css','./worksheets.js'
 ];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
