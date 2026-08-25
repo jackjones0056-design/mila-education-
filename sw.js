@@ -1,4 +1,4 @@
-const CACHE = 'mila-learning-missions-v4';
+const CACHE = 'mila-learning-missions-v5';
 const ASSETS = [
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/icon-192.png',
   './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/manifest.webmanifest',
