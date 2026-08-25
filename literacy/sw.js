@@ -1,4 +1,4 @@
-const CACHE = 'kindergarten-literacy-mission-v2';
+const CACHE = 'kindergarten-literacy-mission-v3';
 const ASSETS = ['./','./index.html','./styles.css','./app.js','./data.js','./manifest.webmanifest','../icons/icon-192.png'];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE && k.startsWith('kindergarten-literacy-mission')).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
