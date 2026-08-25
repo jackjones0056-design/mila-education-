@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Math Mission">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="An 8-week interactive kindergarten mathematics intervention aligned to foundational Eureka Math² concepts.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="stylesheet" href="styles.css">
+  <title>Kindergarten Math Mission</title>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">8-Week Kindergarten Intervention</div>
+        <h1>Math Mission</h1>
+      </div>
+      <div class="top-actions">
+        <button id="installBtn" class="btn secondary" type="button">Install App</button>
+        <button id="parentBtn" class="btn secondary" type="button">Parent Dashboard</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="homeView" class="view active" aria-labelledby="homeTitle">
+        <div class="hero card">
+          <div>
+            <div class="eyebrow">Today’s objective</div>
+            <h2 id="homeTitle">Build strong number sense before speed.</h2>
+            <p>Choose the next lesson. Each session takes about 10–15 minutes and saves automatically on this device.</p>
+          </div>
+          <div class="hero-score">
+            <div class="big-number" id="overallPct">0%</div>
+            <div class="muted">program complete</div>
+          </div>
+        </div>
+
+        <div class="progress-track" aria-label="Overall program progress"><div id="overallBar" class="progress-bar"></div></div>
+
+        <div class="week-grid" id="weekGrid"></div>
+      </section>
+
+      <section id="lessonView" class="view" aria-live="polite">
+        <div class="lesson-head">
+          <button id="backBtn" class="btn secondary" type="button">← Lessons</button>
+          <div class="lesson-meta">
+            <div id="lessonEyebrow" class="eyebrow"></div>
+            <h2 id="lessonTitle"></h2>
+            <p id="lessonGoal" class="muted"></p>
+          </div>
+          <div class="lesson-score" id="lessonScore">⭐ 0</div>
+        </div>
+
+        <div class="progress-track"><div id="lessonBar" class="progress-bar"></div></div>
+
+        <div class="activity card">
+          <div class="activity-top">
+            <div>
+              <div id="roundLabel" class="eyebrow"></div>
+              <h3 id="promptText">Ready?</h3>
+            </div>
+            <button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button>
+          </div>
+          <div id="activityStage" class="activity-stage"></div>
+          <div id="feedback" class="feedback" role="status"></div>
+          <div class="activity-actions">
+            <button id="hintBtn" class="btn secondary hidden" type="button">Show a hint</button>
+            <button id="nextBtn" class="btn primary hidden" type="button">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="parentView" class="view" aria-labelledby="parentTitle">
+        <div class="parent-head">
+          <div>
+            <div class="eyebrow">Parent Dashboard</div>
+            <h2 id="parentTitle">Progress & Mastery</h2>
+            <p class="muted">Accuracy is more useful than raw speed. Aim for 90%+ independent performance before assuming a skill is secure.</p>
+          </div>
+          <button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button>
+        </div>
+        <div class="stats-grid">
+          <div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/32</strong></div>
+          <div class="stat card"><span>Total accuracy</span><strong id="statAccuracy">—</strong></div>
+          <div class="stat card"><span>Current streak</span><strong id="statStreak">0</strong></div>
+          <div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div>
+        </div>
+        <div class="card">
+          <div class="section-title-row"><h3>Weekly mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
+          <div id="parentTableWrap" class="table-wrap"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
+      <div class="modal-card">
+        <h2 id="installTitle">Install on iPad/iPhone</h2>
+        <ol>
+          <li>Open this app in <strong>Safari</strong>.</li>
+          <li>Tap the <strong>Share</strong> button.</li>
+          <li>Choose <strong>Add to Home Screen</strong>.</li>
+          <li>Tap <strong>Add</strong>. It will launch like an app.</li>
+        </ol>
+        <p class="muted">For offline use and full install behavior, the app must be opened from an HTTPS website once. A local Files preview cannot provide service-worker caching.</p>
+        <button id="closeInstall" class="btn primary" type="button">Got it</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
