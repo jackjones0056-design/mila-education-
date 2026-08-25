@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Math Mission - 20 Printable Worksheets</title>
+  <link rel="stylesheet" href="worksheets.css">
+</head>
+<body>
+  <header class="toolbar">
+    <a class="control" href="index.html">← Math Mission</a>
+    <strong>20 Printable Worksheets</strong>
+    <select id="wsSelect" class="control" aria-label="Choose worksheet"></select>
+    <button id="printOne" class="control" type="button">Print selected</button>
+    <button id="printAll" class="control primary" type="button">Print all 20</button>
+  </header>
+  <section class="library">
+    <h1>Paper Practice Library</h1>
+    <p>Black-and-white, one-page worksheets aligned to the same 8-week intervention. Pick a worksheet to preview, then print it - or print the full packet.</p>
+    <div id="pickGrid" class="pick-grid"></div>
+  </section>
+  <main id="pages" class="pages" aria-live="polite"></main>
+  <script src="worksheets.js" defer></script>
+</body>
+</html>
