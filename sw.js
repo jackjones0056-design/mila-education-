@@ -1,7 +1,7 @@
-const CACHE = 'mila-learning-missions-v5';
+const CACHE = 'mila-learning-missions-v6';
 const ASSETS = [
   './','./index.html','./styles.css','./app.js','./manifest.webmanifest','./icons/icon-192.png',
-  './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/manifest.webmanifest',
+  './literacy/','./literacy/index.html','./literacy/styles.css','./literacy/app.js','./literacy/data.js','./literacy/manifest.webmanifest','./literacy/sw.js',
   './worksheets.html','./worksheets.css','./worksheets.js'
 ];
 self.addEventListener('install', event => {
