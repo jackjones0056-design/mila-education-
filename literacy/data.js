@@ -1,10 +1,10 @@
 export const DOMAIN_META={
-  sound:{name:'Phonological Awareness',priority:'Highest priority',css:'sound',star:31,baseline:'Daily sound work; this is a primary intervention target.'},
-  phonics:{name:'Phonics & Word Recognition',priority:'Highest priority',css:'phonics',star:31,baseline:'Daily decoding and encoding; this is a primary intervention target.'},
-  vocabulary:{name:'Vocabulary Acquisition & Use',priority:'High priority',css:'vocabulary',star:38,baseline:'Teach useful words with examples, non-examples, and oral use.'},
-  print:{name:'Print Concepts',priority:'Reinforce',css:'print',star:44,baseline:'Reinforce directionality, words/spaces, capitals, and punctuation inside real reading.'},
-  informational:{name:'Informational Text',priority:'Developing',css:'informational',star:56,baseline:'Build knowledge and evidence talk without displacing foundational skills.'},
-  literature:{name:'Literature: Key Ideas & Details',priority:'Strength',css:'literature',star:80,baseline:'Maintain and use as leverage; do not over-drill.'}
+  sound:{name:'Phonological Awareness',priority:'Highest priority',css:'sound',baseline:'Daily sound work; this is a primary intervention target.'},
+  phonics:{name:'Phonics & Word Recognition',priority:'Highest priority',css:'phonics',baseline:'Daily decoding and encoding; this is a primary intervention target.'},
+  vocabulary:{name:'Vocabulary Acquisition & Use',priority:'High priority',css:'vocabulary',baseline:'Teach useful words with examples, non-examples, and oral use.'},
+  print:{name:'Print Concepts',priority:'Reinforce',css:'print',baseline:'Reinforce directionality, words/spaces, capitals, and punctuation inside real reading.'},
+  informational:{name:'Informational Text',priority:'Developing',css:'informational',baseline:'Build knowledge and evidence talk without displacing foundational skills.'},
+  literature:{name:'Literature: Key Ideas & Details',priority:'Strength',css:'literature',baseline:'Maintain and use as leverage; do not over-drill.'}
 };
 
 export const DEFAULT_LETTERS=['msat','msatpin','msatpincod','msatpincodgfrl','msatpincodgfrlhbu','msatpincodgfrlhbuek','msatpincodgfrlhbuekvwjy','abcdefghijklmnopqrstuvwxyz','abcdefghijklmnopqrstuvwxyz','abcdefghijklmnopqrstuvwxyz'];
