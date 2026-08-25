@@ -3,7 +3,7 @@
 A touch-friendly kindergarten practice site with:
 
 - **Math Mission** — the completed 8-week mathematics intervention and printable worksheets.
-- **Literacy Mission** — an 8-week, 32-lesson reading/literacy intervention customized to the learner's current skill profile.
+- **Literacy Mission** — a 10-week, 50-session reading/literacy intervention customized to the learner's current skill profile.
 
 ## Literacy design
 
@@ -13,11 +13,15 @@ The app follows a sound-to-print progression:
 
 **hear sounds → connect sounds to letters → blend/segment → decode/encode → read for meaning**
 
-It does not teach picture guessing as a word-reading strategy.
+It does not teach picture guessing as a decoding strategy.
 
 ### Wit & Wisdom alignment
 
-The literacy sequence uses knowledge, vocabulary, discussion, and comprehension as the bridge to Wit & Wisdom without reproducing proprietary curriculum passages.
+The literacy sequence uses knowledge, vocabulary, discussion, and comprehension as the bridge to Wit & Wisdom without reproducing proprietary curriculum passages. The Parent Dashboard can also be synchronized to the letters already taught at school plus the current Wit & Wisdom topic and vocabulary; those settings remain on the device.
+
+### Adaptive review
+
+Each session contains six short interactive rounds. Review rounds use the learner's recorded in-app domain accuracy to send additional practice toward the weakest measured area, with foundational sound and phonics skills carrying the highest initial priority.
 
 ## Privacy
 
@@ -25,4 +29,4 @@ Because this repository is public, it intentionally does **not** reproduce the s
 
 ## GitHub Pages
 
-The repository is a static site. Use **Settings → Pages → Deploy from branch → main / root**.
+The repository is a static site. Use **Settings → Pages → Deploy from branch → main / root** if Pages is not already enabled.
