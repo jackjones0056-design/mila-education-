@@ -7,22 +7,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Literacy Mission">
-  <meta name="description" content="An 8-week adaptive kindergarten reading and literacy intervention tailored to STAR Early Literacy results.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="A 10-week interactive kindergarten literacy intervention emphasizing phonological awareness, phonics, vocabulary, print concepts, and knowledge-rich comprehension.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="../icons/icon-192.png">
   <link rel="icon" href="../icons/icon-192.png" sizes="192x192">
   <link rel="stylesheet" href="styles.css">
-  <title>Literacy Mission</title>
+  <title>Kindergarten Literacy Mission</title>
 </head>
 <body>
   <div id="app" class="app-shell">
     <header class="topbar">
       <div>
-        <div class="eyebrow">8-Week Targeted Reading Intervention</div>
+        <div class="eyebrow">10-Week Kindergarten Intervention</div>
         <h1>Literacy Mission</h1>
       </div>
       <div class="top-actions">
-        <a class="btn secondary link-btn" href="../">Math Mission</a>
+        <a class="btn secondary" href="../">Math Mission</a>
         <button id="installBtn" class="btn secondary" type="button">Install App</button>
         <button id="parentBtn" class="btn secondary" type="button">Parent Dashboard</button>
       </div>
@@ -32,23 +33,30 @@
       <section id="homeView" class="view active" aria-labelledby="homeTitle">
         <div class="hero card">
           <div>
-            <div class="eyebrow">Instructional priority</div>
-            <h2 id="homeTitle">Hear sounds. Map sounds to letters. Then read.</h2>
-            <p>This plan is intentionally heavier on phonological awareness and phonics because those were Mila's lowest STAR domains. Strong story comprehension is maintained, not over-drilled.</p>
+            <div class="eyebrow">Today’s objective</div>
+            <h2 id="homeTitle">Build the sound-to-print system.</h2>
+            <p>Short sessions prioritize sound awareness and decoding, reinforce vocabulary and print concepts, and use story comprehension as a strength.</p>
+            <div class="priority-row" aria-label="Instruction priorities">
+              <span class="priority highest">Sound awareness • highest</span>
+              <span class="priority highest">Phonics • highest</span>
+              <span class="priority high">Vocabulary • high</span>
+              <span class="priority medium">Print concepts • reinforce</span>
+              <span class="priority strength">Story meaning • strength</span>
+            </div>
           </div>
           <div class="hero-score">
             <div class="big-number" id="overallPct">0%</div>
             <div class="muted">program complete</div>
           </div>
         </div>
-        <div class="priority-strip card" aria-label="Instructional weighting">
-          <div><strong>30%</strong><span>Sound awareness</span></div>
-          <div><strong>30%</strong><span>Phonics / decoding</span></div>
-          <div><strong>15%</strong><span>Vocabulary</span></div>
-          <div><strong>10%</strong><span>Print concepts</span></div>
-          <div><strong>15%</strong><span>Knowledge & comprehension</span></div>
-        </div>
+
         <div class="progress-track" aria-label="Overall program progress"><div id="overallBar" class="progress-bar"></div></div>
+
+        <div class="strategy card">
+          <div class="strategy-mark" aria-hidden="true">↔</div>
+          <div><strong>Intervention logic:</strong> hear sounds → connect sounds to letters → blend/segment → decode/encode words → read for meaning. Pictures support comprehension, not word guessing.</div>
+        </div>
+
         <div class="week-grid" id="weekGrid"></div>
       </section>
 
@@ -62,12 +70,15 @@
           </div>
           <div class="lesson-score" id="lessonScore">⭐ 0</div>
         </div>
+
         <div class="progress-track"><div id="lessonBar" class="progress-bar"></div></div>
+
         <div class="activity card">
           <div class="activity-top">
             <div>
               <div id="roundLabel" class="eyebrow"></div>
               <h3 id="promptText">Ready?</h3>
+              <div id="skillPill" class="skill-pill"></div>
             </div>
             <button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button>
           </div>
@@ -78,51 +89,82 @@
             <button id="nextBtn" class="btn primary hidden" type="button">Next</button>
           </div>
         </div>
+
+        <div id="knowledgeBridge" class="knowledge card hidden">
+          <div class="eyebrow">Wit &amp; Wisdom Bridge</div>
+          <h3>Use the class text for meaning.</h3>
+          <p id="knowledgePrompt"></p>
+          <button id="newBridgeBtn" class="btn secondary" type="button">New discussion prompt</button>
+        </div>
       </section>
 
       <section id="parentView" class="view" aria-labelledby="parentTitle">
         <div class="parent-head">
           <div>
             <div class="eyebrow">Parent Dashboard</div>
-            <h2 id="parentTitle">STAR-Informed Literacy Plan</h2>
-            <p class="muted">In-app accuracy measures performance on these activities. It does not convert into a predicted STAR score.</p>
+            <h2 id="parentTitle">Progress &amp; Skill Mastery</h2>
+            <p class="muted">Advance on independent accuracy, not on whether a lesson was merely completed.</p>
           </div>
           <button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button>
         </div>
 
         <div class="baseline-grid">
-          <div class="baseline card"><span>STAR scaled score</span><strong>648</strong><small>On Watch • Early Emergent</small></div>
-          <div class="baseline card"><span>Percentile rank</span><strong>31</strong><small>National comparison</small></div>
-          <div class="baseline card priority"><span>Highest priorities</span><strong>31 / 31</strong><small>Phonological awareness • Phonics</small></div>
-          <div class="baseline card strength"><span>Clear strength</span><strong>80</strong><small>Literature: Key Ideas & Details</small></div>
+          <div class="baseline card priority"><span>Phonological Awareness</span><strong>31</strong><small>Highest priority • daily sound work</small></div>
+          <div class="baseline card priority"><span>Phonics &amp; Word Recognition</span><strong>31</strong><small>Highest priority • decoding + encoding</small></div>
+          <div class="baseline card"><span>Vocabulary Acquisition &amp; Use</span><strong>38</strong><small>Priority • explicit oral vocabulary</small></div>
+          <div class="baseline card"><span>Print Concepts</span><strong>44</strong><small>Reinforce inside authentic reading</small></div>
+          <div class="baseline card"><span>Informational Text</span><strong>56</strong><small>Developing • build knowledge/evidence</small></div>
+          <div class="baseline card strength"><span>Literature: Key Ideas &amp; Details</span><strong>80</strong><small>Clear strength • maintain, do not over-drill</small></div>
+        </div>
+
+        <div class="assessment-note card">
+          <strong>Starting STAR Early Literacy profile:</strong> scaled score 648 • 31st percentile • Early Emergent / On Watch. The program uses these domain results to determine instructional weighting; in-app accuracy is not a predicted STAR score.
         </div>
 
         <div class="stats-grid">
-          <div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/32</strong></div>
-          <div class="stat card"><span>Total scored accuracy</span><strong id="statAccuracy">—</strong></div>
+          <div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/50</strong></div>
+          <div class="stat card"><span>Total accuracy</span><strong id="statAccuracy">—</strong></div>
           <div class="stat card"><span>Current streak</span><strong id="statStreak">0</strong></div>
           <div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div>
         </div>
 
-        <div class="card dashboard-card">
-          <div class="section-title-row"><div><div class="eyebrow">Skill Control Panel</div><h3>Baseline → live mastery</h3></div><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
-          <div id="skillTableWrap" class="table-wrap"></div>
-        </div>
-
-        <div class="card dashboard-card">
-          <div class="eyebrow">Wit & Wisdom Bridge</div>
-          <h3>Use knowledge-rich text to maintain the strength.</h3>
-          <p class="muted">Wit & Wisdom supplies rich read-alouds, discussion, vocabulary, and knowledge-building. This app supplies concentrated foundational practice and then reconnects it to meaning. The app uses original prompts and does not reproduce curriculum text.</p>
-          <div class="bridge-grid">
-            <div><strong>Before reading</strong><span>Preview 1–2 important words.</span></div>
-            <div><strong>During reading</strong><span>Ask what changed, why, or what was learned.</span></div>
-            <div><strong>After reading</strong><span>Retell one event/detail and use a new word aloud.</span></div>
+        <div class="card panel">
+          <div class="section-title-row">
+            <div><div class="eyebrow">Adaptive priorities</div><h3>Domain performance</h3></div>
           </div>
+          <div id="domainCards" class="domain-grid"></div>
+          <p class="microcopy">Decision rule: 90%+ = secure/advance; 80–89% = advance with review; 70–79% = repeat; below 70% = reduce difficulty and reteach.</p>
         </div>
 
-        <div class="card dashboard-card">
-          <div class="eyebrow">Weekly Mastery</div>
-          <h3>Advance when performance is secure.</h3>
+        <div class="card panel">
+          <div class="section-title-row">
+            <div><div class="eyebrow">Teacher alignment</div><h3>Match school instruction</h3></div>
+          </div>
+          <p class="muted">Wit &amp; Wisdom supplies knowledge, vocabulary, discussion, and writing. Use the fields below to synchronize the home app with the exact foundational-skills sequence and class text being taught at school.</p>
+          <form id="alignmentForm" class="settings-grid">
+            <label>
+              <span>Letters already taught at school</span>
+              <input id="lettersInput" type="text" inputmode="text" autocomplete="off" placeholder="Example: m s a t p i n">
+              <small>Optional. If entered, decoding activities restrict themselves to words built from these letters whenever possible.</small>
+            </label>
+            <label>
+              <span>Current Wit &amp; Wisdom topic or book</span>
+              <input id="topicInput" type="text" autocomplete="off" placeholder="Example: five senses / current core text">
+            </label>
+            <label class="wide">
+              <span>Current class vocabulary</span>
+              <input id="vocabInput" type="text" autocomplete="off" placeholder="Enter words separated by commas">
+              <small>The app uses these words in discussion prompts without reproducing copyrighted curriculum text.</small>
+            </label>
+            <div class="wide form-actions">
+              <button class="btn primary" type="submit">Save Alignment</button>
+              <span id="settingsSaved" class="save-status" role="status"></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="card panel">
+          <div class="section-title-row"><h3>Weekly mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
           <div id="parentTableWrap" class="table-wrap"></div>
         </div>
       </section>
@@ -131,7 +173,13 @@
     <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
       <div class="modal-card">
         <h2 id="installTitle">Install on iPad/iPhone</h2>
-        <ol><li>Open the Learning Hub in <strong>Safari</strong>.</li><li>Tap <strong>Share</strong>.</li><li>Choose <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li></ol>
+        <ol>
+          <li>Open this app in <strong>Safari</strong>.</li>
+          <li>Tap the <strong>Share</strong> button.</li>
+          <li>Choose <strong>Add to Home Screen</strong>.</li>
+          <li>Tap <strong>Add</strong>.</li>
+        </ol>
+        <p class="muted">Offline caching requires the app to be loaded from an HTTPS website at least once.</p>
         <button id="closeInstall" class="btn primary" type="button">Got it</button>
       </div>
     </div>
