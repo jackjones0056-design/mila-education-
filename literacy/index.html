@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Literacy Mission">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="description" content="A 10-week interactive kindergarten literacy intervention emphasizing phonological awareness, phonics, vocabulary, print concepts, and knowledge-rich comprehension.">
+  <meta name="description" content="A 10-week kindergarten literacy intervention aligned to current Harrison County Term 1 foundations and Wit & Wisdom comprehension work.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="../icons/icon-192.png">
   <link rel="icon" href="../icons/icon-192.png" sizes="192x192">
@@ -19,7 +19,7 @@
   <div id="app" class="app-shell">
     <header class="topbar">
       <div>
-        <div class="eyebrow">10-Week Kindergarten Intervention</div>
+        <div class="eyebrow">Harrison County • Term 1 Alignment</div>
         <h1>Literacy Mission</h1>
       </div>
       <div class="top-actions">
@@ -34,33 +34,35 @@
       <section id="homeView" class="view active" aria-labelledby="homeTitle">
         <div class="hero card">
           <div>
-            <div class="eyebrow">Today’s objective</div>
-            <h2 id="homeTitle">Build the sound-to-print system.</h2>
-            <p>Short sessions prioritize sound awareness and decoding, reinforce vocabulary and print concepts, and use story comprehension as a strength.</p>
-            <div class="priority-row" aria-label="Instruction priorities">
-              <span class="priority highest">Sound awareness • highest</span>
-              <span class="priority highest">Phonics • highest</span>
-              <span class="priority high">Vocabulary • high</span>
-              <span class="priority medium">Print concepts • reinforce</span>
-              <span class="priority strength">Story meaning • strength</span>
+            <div class="eyebrow">Current school objective</div>
+            <h2 id="homeTitle">Build the sound-to-print system they are teaching now.</h2>
+            <p>The sequence now prioritizes the Term 1 report-card standards: print direction and spacing, upper/lowercase forms, consonant sounds, onset-rime, first/middle/last sounds in CVC words, sound changes, short vowels, phonetic spelling, capitals, punctuation, and writing support.</p>
+            <div class="priority-row" aria-label="Current instruction priorities">
+              <span class="priority highest">RF.K.1 • print</span>
+              <span class="priority highest">RF.K.2c–e • sounds</span>
+              <span class="priority highest">RF.K.3a–d • phonics</span>
+              <span class="priority high">L.K.1–2 • conventions</span>
+              <span class="priority strength">Wit &amp; Wisdom • meaning</span>
             </div>
           </div>
-          <div class="hero-score">
-            <div class="big-number" id="overallPct">0%</div>
-            <div class="muted">program complete</div>
-          </div>
+          <div class="hero-score"><div class="big-number" id="overallPct">0%</div><div class="muted">Term 1 plan complete</div></div>
         </div>
 
         <div class="progress-track" aria-label="Overall program progress"><div id="overallBar" class="progress-bar"></div></div>
 
-        <div class="strategy card">
+        <div class="strategy card" style="border:2px solid #0f766e">
           <div class="strategy-mark" aria-hidden="true">↔</div>
-          <div><strong>Intervention logic:</strong> hear sounds → connect sounds to letters → blend/segment → decode/encode words → read for meaning. Pictures support comprehension, not word guessing.</div>
+          <div><strong>Adjusted fire:</strong> rhyme/syllable drills and sight-word automaticity are no longer consuming the front of the plan. The main lane is now the standards marked for introduction in Term 1. Comprehension stays active through Wit &amp; Wisdom because meaning is useful leverage, not because we need to bury her in extra reading worksheets.</div>
+        </div>
+
+        <div class="strategy card">
+          <div class="strategy-mark" aria-hidden="true">✏️</div>
+          <div><strong>Best order:</strong> say/hear the sounds → build or write by hand → complete the matching app lesson → use the current class text for discussion or an opinion-writing response.</div>
         </div>
 
         <div class="strategy card" style="border:2px solid #0f766e;align-items:center">
-          <div class="strategy-mark" aria-hidden="true">✏️</div>
-          <div style="flex:1"><strong>20 Kid-Themed Printable Worksheets</strong><div class="muted">Rockets, animals, dinosaurs, robots, detectives, superheroes, and more — all matched to the same 10-week literacy sequence.</div></div>
+          <div class="strategy-mark" aria-hidden="true">🖍️</div>
+          <div style="flex:1"><strong>20 Kid-Themed Printable Worksheets</strong><div class="muted">Paper practice remains available for the hand-first routine. Use the worksheets that match the current week before the digital lesson.</div></div>
           <a class="btn primary" href="worksheets.html">Open Worksheets</a>
         </div>
 
@@ -70,126 +72,52 @@
       <section id="lessonView" class="view" aria-live="polite">
         <div class="lesson-head">
           <button id="backBtn" class="btn secondary" type="button">← Lessons</button>
-          <div class="lesson-meta">
-            <div id="lessonEyebrow" class="eyebrow"></div>
-            <h2 id="lessonTitle"></h2>
-            <p id="lessonGoal" class="muted"></p>
-          </div>
+          <div class="lesson-meta"><div id="lessonEyebrow" class="eyebrow"></div><h2 id="lessonTitle"></h2><p id="lessonGoal" class="muted"></p></div>
           <div class="lesson-score" id="lessonScore">⭐ 0</div>
         </div>
-
         <div class="progress-track"><div id="lessonBar" class="progress-bar"></div></div>
-
         <div class="activity card">
-          <div class="activity-top">
-            <div>
-              <div id="roundLabel" class="eyebrow"></div>
-              <h3 id="promptText">Ready?</h3>
-              <div id="skillPill" class="skill-pill"></div>
-            </div>
-            <button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button>
-          </div>
-          <div id="activityStage" class="activity-stage"></div>
-          <div id="feedback" class="feedback" role="status"></div>
-          <div class="activity-actions">
-            <button id="hintBtn" class="btn secondary hidden" type="button">Show a hint</button>
-            <button id="nextBtn" class="btn primary hidden" type="button">Next</button>
-          </div>
+          <div class="activity-top"><div><div id="roundLabel" class="eyebrow"></div><h3 id="promptText">Ready?</h3><div id="skillPill" class="skill-pill"></div></div><button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button></div>
+          <div id="activityStage" class="activity-stage"></div><div id="feedback" class="feedback" role="status"></div>
+          <div class="activity-actions"><button id="hintBtn" class="btn secondary hidden" type="button">Show a hint</button><button id="nextBtn" class="btn primary hidden" type="button">Next</button></div>
         </div>
-
-        <div id="knowledgeBridge" class="knowledge card hidden">
-          <div class="eyebrow">Wit &amp; Wisdom Bridge</div>
-          <h3>Use the class text for meaning.</h3>
-          <p id="knowledgePrompt"></p>
-          <button id="newBridgeBtn" class="btn secondary" type="button">New discussion prompt</button>
-        </div>
+        <div id="knowledgeBridge" class="knowledge card hidden"><div class="eyebrow">Wit &amp; Wisdom Bridge</div><h3>Use the class text for meaning.</h3><p id="knowledgePrompt"></p><button id="newBridgeBtn" class="btn secondary" type="button">New discussion prompt</button></div>
       </section>
 
       <section id="parentView" class="view" aria-labelledby="parentTitle">
-        <div class="parent-head">
-          <div>
-            <div class="eyebrow">Parent Dashboard</div>
-            <h2 id="parentTitle">Progress &amp; Skill Mastery</h2>
-            <p class="muted">Advance on independent accuracy, not on whether a lesson was merely completed.</p>
-          </div>
-          <button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button>
-        </div>
+        <div class="parent-head"><div><div class="eyebrow">Parent Dashboard • Term 1</div><h2 id="parentTitle">Progress &amp; Skill Mastery</h2><p class="muted">Advance on independent accuracy, not on whether a lesson was merely completed.</p></div><button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button></div>
 
         <div class="baseline-grid">
-          <div class="baseline card priority"><span>Phonological Awareness</span><strong>Highest</strong><small>Daily sound work • primary intervention target</small></div>
-          <div class="baseline card priority"><span>Phonics &amp; Word Recognition</span><strong>Highest</strong><small>Daily decoding + encoding • primary intervention target</small></div>
-          <div class="baseline card"><span>Vocabulary Acquisition &amp; Use</span><strong>Priority</strong><small>Explicit oral vocabulary and word use</small></div>
-          <div class="baseline card"><span>Print Concepts</span><strong>Reinforce</strong><small>Directionality, words/spaces, capitals, punctuation</small></div>
-          <div class="baseline card"><span>Informational Text</span><strong>Develop</strong><small>Build knowledge and evidence talk</small></div>
-          <div class="baseline card strength"><span>Literature: Key Ideas &amp; Details</span><strong>Strength</strong><small>Maintain and use to support harder foundational work</small></div>
+          <div class="baseline card priority"><span>Print Concepts</span><strong>Current</strong><small>RF.K.1a–c • directionality, spoken/printed words, spaces</small></div>
+          <div class="baseline card priority"><span>Sound Work</span><strong>Current</strong><small>RF.K.2c–e • onset-rime, CVC sound positions, sound changes</small></div>
+          <div class="baseline card priority"><span>Phonics</span><strong>Current</strong><small>RF.K.3a–d • consonants, vowel links, similar-word discrimination</small></div>
+          <div class="baseline card"><span>Language Conventions</span><strong>Current</strong><small>L.K.1–2 • letters, plurals, capitals, punctuation, phonetic spelling</small></div>
+          <div class="baseline card"><span>Writing</span><strong>Current</strong><small>W.K.1 • compose an opinion using drawing, dictating, and writing</small></div>
+          <div class="baseline card strength"><span>Literature / Informational Meaning</span><strong>Class-text bridge</strong><small>Use Wit &amp; Wisdom for key details, retell, characters, facts, and discussion</small></div>
         </div>
 
-        <div class="assessment-note card">
-          <strong>Assessment-informed design:</strong> the intervention weighting and progression were built from the current literacy assessment profile. Exact student assessment details are intentionally kept out of this public repository.
-        </div>
+        <div class="assessment-note card"><strong>Sequence rule:</strong> current-term standards are front-loaded. Later-term automaticity and broader fluency are deferred until the school introduces them or current skills are secure.</div>
 
-        <div class="stats-grid">
-          <div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/50</strong></div>
-          <div class="stat card"><span>Total accuracy</span><strong id="statAccuracy">—</strong></div>
-          <div class="stat card"><span>Current streak</span><strong id="statStreak">0</strong></div>
-          <div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div>
-        </div>
+        <div class="stats-grid"><div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/50</strong></div><div class="stat card"><span>Total accuracy</span><strong id="statAccuracy">—</strong></div><div class="stat card"><span>Current streak</span><strong id="statStreak">0</strong></div><div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div></div>
+
+        <div class="card panel"><div class="section-title-row"><div><div class="eyebrow">Adaptive priorities</div><h3>Domain performance</h3></div></div><div id="domainCards" class="domain-grid"></div><p class="microcopy">Decision rule: 90%+ = secure/advance; 80–89% = advance with review; 70–79% = repeat; below 70% = reduce difficulty and reteach.</p></div>
 
         <div class="card panel">
-          <div class="section-title-row">
-            <div><div class="eyebrow">Adaptive priorities</div><h3>Domain performance</h3></div>
-          </div>
-          <div id="domainCards" class="domain-grid"></div>
-          <p class="microcopy">Decision rule: 90%+ = secure/advance; 80–89% = advance with review; 70–79% = repeat; below 70% = reduce difficulty and reteach.</p>
-        </div>
-
-        <div class="card panel">
-          <div class="section-title-row">
-            <div><div class="eyebrow">Teacher alignment</div><h3>Match school instruction</h3></div>
-          </div>
-          <p class="muted">Wit &amp; Wisdom supplies knowledge, vocabulary, discussion, and writing. Use the fields below to synchronize the home app with the exact foundational-skills sequence and class text being taught at school.</p>
+          <div class="section-title-row"><div><div class="eyebrow">Teacher alignment</div><h3>Match school instruction</h3></div></div>
+          <p class="muted">Use these fields to synchronize the app to the exact letters, Wit &amp; Wisdom text, and vocabulary currently taught in class.</p>
           <form id="alignmentForm" class="settings-grid">
-            <label>
-              <span>Letters already taught at school</span>
-              <input id="lettersInput" type="text" inputmode="text" autocomplete="off" placeholder="Example: m s a t p i n">
-              <small>Optional. If entered, decoding activities restrict themselves to words built from these letters whenever possible.</small>
-            </label>
-            <label>
-              <span>Current Wit &amp; Wisdom topic or book</span>
-              <input id="topicInput" type="text" autocomplete="off" placeholder="Example: five senses / current core text">
-            </label>
-            <label class="wide">
-              <span>Current class vocabulary</span>
-              <input id="vocabInput" type="text" autocomplete="off" placeholder="Enter words separated by commas">
-              <small>The app uses these words in discussion prompts without reproducing copyrighted curriculum text.</small>
-            </label>
-            <div class="wide form-actions">
-              <button class="btn primary" type="submit">Save Alignment</button>
-              <span id="settingsSaved" class="save-status" role="status"></span>
-            </div>
+            <label><span>Letters already taught at school</span><input id="lettersInput" type="text" inputmode="text" autocomplete="off" placeholder="Example: m s a t p i n"><small>If entered, decoding activities restrict themselves to those letters whenever possible.</small></label>
+            <label><span>Current Wit &amp; Wisdom topic or book</span><input id="topicInput" type="text" autocomplete="off" placeholder="Example: current core text / topic"></label>
+            <label class="wide"><span>Current class vocabulary</span><input id="vocabInput" type="text" autocomplete="off" placeholder="Enter words separated by commas"><small>The app uses these words in discussion prompts without reproducing copyrighted curriculum text.</small></label>
+            <div class="wide form-actions"><button class="btn primary" type="submit">Save Alignment</button><span id="settingsSaved" class="save-status" role="status"></span></div>
           </form>
         </div>
 
-        <div class="card panel">
-          <div class="section-title-row"><h3>Weekly mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
-          <div id="parentTableWrap" class="table-wrap"></div>
-        </div>
+        <div class="card panel"><div class="section-title-row"><h3>Weekly mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div><div id="parentTableWrap" class="table-wrap"></div></div>
       </section>
     </main>
 
-    <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
-      <div class="modal-card">
-        <h2 id="installTitle">Install on iPad/iPhone</h2>
-        <ol>
-          <li>Open this app in <strong>Safari</strong>.</li>
-          <li>Tap the <strong>Share</strong> button.</li>
-          <li>Choose <strong>Add to Home Screen</strong>.</li>
-          <li>Tap <strong>Add</strong>.</li>
-        </ol>
-        <p class="muted">Offline caching requires the app to be loaded from an HTTPS website at least once.</p>
-        <button id="closeInstall" class="btn primary" type="button">Got it</button>
-      </div>
-    </div>
+    <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle"><div class="modal-card"><h2 id="installTitle">Install on iPad/iPhone</h2><ol><li>Open this app in <strong>Safari</strong>.</li><li>Tap <strong>Share</strong>.</li><li>Choose <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li></ol><p class="muted">Offline caching requires the app to be loaded from an HTTPS website at least once.</p><button id="closeInstall" class="btn primary" type="button">Got it</button></div></div>
   </div>
   <script src="app.js" defer></script>
 </body>
