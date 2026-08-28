@@ -17,112 +17,21 @@
 </head>
 <body>
   <div id="app" class="app-shell">
-    <header class="topbar">
-      <div>
-        <div class="eyebrow">Harrison County • Term 1 Alignment</div>
-        <h1>Math Mission</h1>
-      </div>
-      <div class="top-actions">
-        <a href="literacy/" class="btn secondary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Literacy Mission</a>
-        <a href="worksheets.html" class="btn secondary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">🖨️ Printables</a>
-        <button id="installBtn" class="btn secondary" type="button">Install App</button>
-        <button id="parentBtn" class="btn secondary" type="button">Parent Dashboard</button>
-      </div>
-    </header>
-
+    <header class="topbar"><div><div class="eyebrow">Harrison County • Term 1 Alignment</div><h1>Math Mission</h1></div><div class="top-actions"><a href="literacy/" class="btn secondary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">Literacy Mission</a><a href="worksheets.html" class="btn secondary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">🖨️ Printables</a><button id="installBtn" class="btn secondary" type="button">Install App</button><button id="parentBtn" class="btn secondary" type="button">Parent Dashboard</button></div></header>
     <main>
       <section id="homeView" class="view active" aria-labelledby="homeTitle">
-        <div class="hero card">
-          <div>
-            <div class="eyebrow">Current school objective</div>
-            <h2 id="homeTitle">Master what is being introduced now.</h2>
-            <p>The sequence now follows the Term 1 standards shown on the kindergarten report card: counting/cardinality, current counting benchmarks, quantity comparison, geometry/position, measurable attributes, and modeling join/separate stories.</p>
-          </div>
-          <div class="hero-score">
-            <div class="big-number" id="overallPct">0%</div>
-            <div class="muted">Term 1 plan complete</div>
-          </div>
-        </div>
-
+        <div class="hero card"><div><div class="eyebrow">Current school objective</div><h2 id="homeTitle">Master what is being introduced now.</h2><p>The sequence now follows the Term 1 standards shown on the kindergarten report card: counting/cardinality, current counting benchmarks, quantity comparison, geometry/position, measurable attributes, and modeling join/separate stories.</p></div><div class="hero-score"><div class="big-number" id="overallPct">0%</div><div class="muted">Term 1 plan complete</div></div></div>
         <div class="progress-track" aria-label="Overall program progress"><div id="overallBar" class="progress-bar"></div></div>
-
-        <div class="card" style="padding:20px;margin-bottom:18px;border:2px solid #111827">
-          <div class="eyebrow">Adjusted Fire • Current Term</div>
-          <h2 style="margin:4px 0 8px;font-size:1.55rem">What changed</h2>
-          <p class="muted" style="margin:0">Formal fact fluency, decomposing to 10, numeral-vs-numeral comparison, and teen-number base-ten work are no longer front-loaded. Those are later-term targets on the report card. Term 1 now stays on the standards marked for introduction now.</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
-            <span class="badge good">K.CC.1–6</span><span class="badge good">K.OA.1</span><span class="badge good">K.MD.1</span><span class="badge good">K.G.1–6</span>
-          </div>
-        </div>
-
-        <div class="card" style="padding:20px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-          <div style="min-width:220px;flex:1">
-            <div class="eyebrow">Paper First</div>
-            <h2 style="margin:4px 0 6px;font-size:1.55rem">Printable Math Worksheets</h2>
-            <p class="muted" style="margin:0">Use paper/objects first, then reinforce the same skill in the app. The printable library is being kept in the same intervention system.</p>
-          </div>
-          <a href="worksheets.html" class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:170px">🖨️ Open Printables</a>
-        </div>
-
+        <div class="card" style="padding:20px;margin-bottom:18px;border:2px solid #111827"><div class="eyebrow">Adjusted Fire • Current Term</div><h2 style="margin:4px 0 8px;font-size:1.55rem">What changed</h2><p class="muted" style="margin:0">Formal fact fluency, decomposing to 10, numeral-vs-numeral comparison, and teen-number base-ten work are no longer front-loaded. Those are later-term targets on the report card. Term 1 now stays on the standards marked for introduction now.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><span class="badge good">K.CC.1–6</span><span class="badge good">K.OA.1</span><span class="badge good">K.MD.1</span><span class="badge good">K.G.1–6</span></div></div>
+        <div class="card" style="padding:20px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap"><div style="min-width:220px;flex:1"><div class="eyebrow">Paper First</div><h2 style="margin:4px 0 6px;font-size:1.55rem">Printable Math Worksheets</h2><p class="muted" style="margin:0">Use paper/objects first, then reinforce the same skill in the app. The printable library is being kept in the same intervention system.</p></div><a href="worksheets.html" class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:170px">🖨️ Open Printables</a></div>
         <div class="week-grid" id="weekGrid"></div>
       </section>
-
-      <section id="lessonView" class="view" aria-live="polite">
-        <div class="lesson-head">
-          <button id="backBtn" class="btn secondary" type="button">← Lessons</button>
-          <div class="lesson-meta">
-            <div id="lessonEyebrow" class="eyebrow"></div>
-            <h2 id="lessonTitle"></h2>
-            <p id="lessonGoal" class="muted"></p>
-          </div>
-          <div class="lesson-score" id="lessonScore">⭐ 0</div>
-        </div>
-        <div class="progress-track"><div id="lessonBar" class="progress-bar"></div></div>
-        <div class="activity card">
-          <div class="activity-top">
-            <div><div id="roundLabel" class="eyebrow"></div><h3 id="promptText">Ready?</h3></div>
-            <button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button>
-          </div>
-          <div id="activityStage" class="activity-stage"></div>
-          <div id="feedback" class="feedback" role="status"></div>
-          <div class="activity-actions">
-            <button id="hintBtn" class="btn secondary hidden" type="button">Show a hint</button>
-            <button id="nextBtn" class="btn primary hidden" type="button">Next</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="parentView" class="view" aria-labelledby="parentTitle">
-        <div class="parent-head">
-          <div>
-            <div class="eyebrow">Parent Dashboard • Term 1</div>
-            <h2 id="parentTitle">Progress & Mastery</h2>
-            <p class="muted">Use independent accuracy as the decision rule. 90%+ = secure; 80–89% = advance with review; 70–79% = repeat; below 70% = reduce difficulty and reteach.</p>
-          </div>
-          <button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button>
-        </div>
-        <div class="stats-grid">
-          <div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/32</strong></div>
-          <div class="stat card"><span>Total accuracy</span><strong id="statAccuracy">—</strong></div>
-          <div class="stat card"><span>Current streak</span><strong id="statStreak">0</strong></div>
-          <div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div>
-        </div>
-        <div class="card">
-          <div class="section-title-row"><h3>Weekly standards mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
-          <div id="parentTableWrap" class="table-wrap"></div>
-        </div>
-      </section>
+      <section id="lessonView" class="view" aria-live="polite"><div class="lesson-head"><button id="backBtn" class="btn secondary" type="button">← Lessons</button><div class="lesson-meta"><div id="lessonEyebrow" class="eyebrow"></div><h2 id="lessonTitle"></h2><p id="lessonGoal" class="muted"></p></div><div class="lesson-score" id="lessonScore">⭐ 0</div></div><div class="progress-track"><div id="lessonBar" class="progress-bar"></div></div><div class="activity card"><div class="activity-top"><div><div id="roundLabel" class="eyebrow"></div><h3 id="promptText">Ready?</h3></div><button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button></div><div id="activityStage" class="activity-stage"></div><div id="feedback" class="feedback" role="status"></div><div class="activity-actions"><button id="hintBtn" class="btn secondary hidden" type="button">Show a hint</button><button id="nextBtn" class="btn primary hidden" type="button">Next</button></div></div></section>
+      <section id="parentView" class="view" aria-labelledby="parentTitle"><div class="parent-head"><div><div class="eyebrow">Parent Dashboard • Term 1</div><h2 id="parentTitle">Progress & Mastery</h2><p class="muted">Use independent accuracy as the decision rule. 90%+ = secure; 80–89% = advance with review; 70–79% = repeat; below 70% = reduce difficulty and reteach.</p></div><button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button></div><div class="stats-grid"><div class="stat card"><span>Lessons completed</span><strong id="statLessons">0/32</strong></div><div class="stat card"><span>Total accuracy</span><strong id="statAccuracy">—</strong></div><div class="stat card"><span>Current streak</span><strong id="statStreak">0</strong></div><div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div></div><div class="card"><div class="section-title-row"><h3>Weekly standards mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div><div id="parentTableWrap" class="table-wrap"></div></div></section>
     </main>
-
-    <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
-      <div class="modal-card">
-        <h2 id="installTitle">Install on iPad/iPhone</h2>
-        <ol><li>Open this app in <strong>Safari</strong>.</li><li>Tap <strong>Share</strong>.</li><li>Choose <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li></ol>
-        <p class="muted">Offline caching requires the app to load from the HTTPS site at least once.</p>
-        <button id="closeInstall" class="btn primary" type="button">Got it</button>
-      </div>
-    </div>
+    <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle"><div class="modal-card"><h2 id="installTitle">Install on iPad/iPhone</h2><ol><li>Open this app in <strong>Safari</strong>.</li><li>Tap <strong>Share</strong>.</li><li>Choose <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li></ol><p class="muted">Offline caching requires the app to load from the HTTPS site at least once.</p><button id="closeInstall" class="btn primary" type="button">Got it</button></div></div>
   </div>
   <script src="app-term1.js" defer></script>
+  <script src="math-patch.js" defer></script>
 </body>
 </html>
