@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Math Mission">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="description" content="An 8-week interactive kindergarten mathematics intervention aligned to foundational Eureka Math² concepts.">
+  <meta name="description" content="An 8-week kindergarten mathematics intervention aligned to Harrison County Term 1 standards and Eureka Math² foundations.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="icon" href="icons/icon-192.png" sizes="192x192">
@@ -19,7 +19,7 @@
   <div id="app" class="app-shell">
     <header class="topbar">
       <div>
-        <div class="eyebrow">8-Week Kindergarten Intervention</div>
+        <div class="eyebrow">Harrison County • Term 1 Alignment</div>
         <h1>Math Mission</h1>
       </div>
       <div class="top-actions">
@@ -34,23 +34,32 @@
       <section id="homeView" class="view active" aria-labelledby="homeTitle">
         <div class="hero card">
           <div>
-            <div class="eyebrow">Today’s objective</div>
-            <h2 id="homeTitle">Build strong number sense before speed.</h2>
-            <p>Choose the next lesson. Each session takes about 10–15 minutes and saves automatically on this device.</p>
+            <div class="eyebrow">Current school objective</div>
+            <h2 id="homeTitle">Master what is being introduced now.</h2>
+            <p>The sequence now follows the Term 1 standards shown on the kindergarten report card: counting/cardinality, current counting benchmarks, quantity comparison, geometry/position, measurable attributes, and modeling join/separate stories.</p>
           </div>
           <div class="hero-score">
             <div class="big-number" id="overallPct">0%</div>
-            <div class="muted">program complete</div>
+            <div class="muted">Term 1 plan complete</div>
           </div>
         </div>
 
         <div class="progress-track" aria-label="Overall program progress"><div id="overallBar" class="progress-bar"></div></div>
 
-        <div class="card" style="padding:20px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border:2px solid #111827">
+        <div class="card" style="padding:20px;margin-bottom:18px;border:2px solid #111827">
+          <div class="eyebrow">Adjusted Fire • Current Term</div>
+          <h2 style="margin:4px 0 8px;font-size:1.55rem">What changed</h2>
+          <p class="muted" style="margin:0">Formal fact fluency, decomposing to 10, numeral-vs-numeral comparison, and teen-number base-ten work are no longer front-loaded. Those are later-term targets on the report card. Term 1 now stays on the standards marked for introduction now.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+            <span class="badge good">K.CC.1–6</span><span class="badge good">K.OA.1</span><span class="badge good">K.MD.1</span><span class="badge good">K.G.1–6</span>
+          </div>
+        </div>
+
+        <div class="card" style="padding:20px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
           <div style="min-width:220px;flex:1">
-            <div class="eyebrow">New • Paper Practice</div>
-            <h2 style="margin:4px 0 6px;font-size:1.55rem">20 Printable Math Worksheets</h2>
-            <p class="muted" style="margin:0">Black-and-white practice matched to the 8-week intervention. Preview one sheet, print one, or print the entire packet.</p>
+            <div class="eyebrow">Paper First</div>
+            <h2 style="margin:4px 0 6px;font-size:1.55rem">Printable Math Worksheets</h2>
+            <p class="muted" style="margin:0">Use paper/objects first, then reinforce the same skill in the app. The printable library is being kept in the same intervention system.</p>
           </div>
           <a href="worksheets.html" class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:170px">🖨️ Open Printables</a>
         </div>
@@ -68,15 +77,10 @@
           </div>
           <div class="lesson-score" id="lessonScore">⭐ 0</div>
         </div>
-
         <div class="progress-track"><div id="lessonBar" class="progress-bar"></div></div>
-
         <div class="activity card">
           <div class="activity-top">
-            <div>
-              <div id="roundLabel" class="eyebrow"></div>
-              <h3 id="promptText">Ready?</h3>
-            </div>
+            <div><div id="roundLabel" class="eyebrow"></div><h3 id="promptText">Ready?</h3></div>
             <button id="speakBtn" class="btn secondary" type="button">🔊 Read to me</button>
           </div>
           <div id="activityStage" class="activity-stage"></div>
@@ -91,9 +95,9 @@
       <section id="parentView" class="view" aria-labelledby="parentTitle">
         <div class="parent-head">
           <div>
-            <div class="eyebrow">Parent Dashboard</div>
+            <div class="eyebrow">Parent Dashboard • Term 1</div>
             <h2 id="parentTitle">Progress & Mastery</h2>
-            <p class="muted">Accuracy is more useful than raw speed. Aim for 90%+ independent performance before assuming a skill is secure.</p>
+            <p class="muted">Use independent accuracy as the decision rule. 90%+ = secure; 80–89% = advance with review; 70–79% = repeat; below 70% = reduce difficulty and reteach.</p>
           </div>
           <button id="parentBackBtn" class="btn secondary" type="button">← Lessons</button>
         </div>
@@ -104,7 +108,7 @@
           <div class="stat card"><span>Stars earned</span><strong id="statStars">0</strong></div>
         </div>
         <div class="card">
-          <div class="section-title-row"><h3>Weekly mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
+          <div class="section-title-row"><h3>Weekly standards mastery</h3><button id="resetBtn" class="btn danger" type="button">Reset Progress</button></div>
           <div id="parentTableWrap" class="table-wrap"></div>
         </div>
       </section>
@@ -113,17 +117,12 @@
     <div id="installModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
       <div class="modal-card">
         <h2 id="installTitle">Install on iPad/iPhone</h2>
-        <ol>
-          <li>Open this app in <strong>Safari</strong>.</li>
-          <li>Tap the <strong>Share</strong> button.</li>
-          <li>Choose <strong>Add to Home Screen</strong>.</li>
-          <li>Tap <strong>Add</strong>. It will launch like an app.</li>
-        </ol>
-        <p class="muted">For offline use and full install behavior, the app must be opened from an HTTPS website once. A local Files preview cannot provide service-worker caching.</p>
+        <ol><li>Open this app in <strong>Safari</strong>.</li><li>Tap <strong>Share</strong>.</li><li>Choose <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li></ol>
+        <p class="muted">Offline caching requires the app to load from the HTTPS site at least once.</p>
         <button id="closeInstall" class="btn primary" type="button">Got it</button>
       </div>
     </div>
   </div>
-  <script src="app.js" defer></script>
+  <script src="app-term1.js" defer></script>
 </body>
 </html>
